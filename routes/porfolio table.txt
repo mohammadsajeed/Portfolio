@@ -1,0 +1,54 @@
+porfolio table
+
+         about_us
+
+        ID
+        description
+
+
+         Expereince
+
+         ID
+         Expereince_type_name
+         description
+
+         Skills
+
+         ID
+         inforamtions
+
+
+         Education
+
+         ID
+         Cource_name
+         description
+
+
+
+         Work_experice
+
+         ID
+         Title
+         Date
+         inforamtions
+
+
+         articles
+         ID
+         Title
+         Date
+         description
+
+         Contact
+         ID
+         email
+         address
+         Phone
+
+
+         messages
+         name
+         email
+         subject
+         messages

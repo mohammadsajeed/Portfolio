@@ -22,7 +22,7 @@
                         .e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a
                         .zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o =
                         (new Date).getTimezoneOffset(), z.defer = !0, z.src =
-                        "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a
+                        "cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a
                             .zarazData))), t.parentNode.insertBefore(z, t)
                 }))
             }(w, d, 0, "script");
@@ -101,11 +101,10 @@
                             Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i
-                                class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/"
-                                target="_blank">Colorlib</a>
-                            </span> <span>Demo Images: <a href="https://unsplash.com/"
-                                    target="_blank">Unsplash.com</a></span>
+                            </script> All rights reserved | This portfolio is made By <i
+                                class="icon-heart" aria-hidden="true"></i> by <a href="
+                                target="_blank">Mohammad Sajeed</a>
+                            </span>
                         </small></p>
                     <ul>
                         <li><a href="#"><i class="icon-facebook2"></i></a></li>
