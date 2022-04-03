@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\About_us_Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('admin.about'); });
+// // })->middleware(['auth'])->name('index');
+
+Route::get('index', function () {
     return view('index'); });
-// })->middleware(['auth'])->name('index');
+
+    // admindashboard routes
+
+Route::get('about_us', [About_us_Controller::class,'index']);
+Route::post('add_about',[About_us_Controller::class,'add_about_us']);
 
 require __DIR__.'/auth.php';
