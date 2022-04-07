@@ -1,4 +1,4 @@
-porfolio table
+porfolio table   DA7TIXUHK2
 
          about_us
 
@@ -13,10 +13,13 @@ porfolio table
          description
 
          Skills
-
          ID
          inforamtions
 
+        Skills_technology
+        ID
+        Technology_name
+        ablity_persentage
 
          Education
 

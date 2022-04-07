@@ -77,7 +77,7 @@
             <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
                 <div class="text-center">
                     <div class="author-img"
-                        style="background-image:url(images/xabout.jpg.pagespeed.ic.6OdLvo-0yJ.jpg)"></div>
+                        style="background-image:url(images/sajid.jpg)"></div>
                     <h1 id="colorlib-logo"><a href="index-2.html">Mohammad Sajeed Habibi</a></h1>
                     <span class="position"><a href="#">UI/UX/Designer</a> From Afghanistan </span>
                 </div>
