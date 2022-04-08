@@ -3,6 +3,7 @@
 use App\Http\Controllers\About_us_Controller;
 use App\Http\Controllers\Education_controller;
 use App\Http\Controllers\Experience_Controller;
+use App\Http\Controllers\Recent_work_Controller;
 use App\Http\Controllers\Skills_Techonligy_Controller;
 use App\Http\Controllers\Work_experience_controller;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,7 @@ Route::get('/education',[Education_controller::class,'index']);
 Route::post('add_degree',[Education_controller::class,'add_degree']);
 Route::get('/work',[Work_experience_controller::class,'index']);
 Route::post('/add_work',[Work_experience_controller::class,'add_work']);
+Route::get('project',[Recent_work_Controller::class,'index']);
 
 
 require __DIR__.'/auth.php';

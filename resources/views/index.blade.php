@@ -101,9 +101,9 @@
                             Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | This portfolio is made By <i
+                            </script> All rights reserved | This portfolio is made  <i
                                 class="icon-heart" aria-hidden="true"></i> by <a href="
-                                target="_blank">Mohammad Sajeed</a>
+                                target="_blank">Mohammad Sajeed Habibi</a>
                             </span>
                         </small></p>
                     <ul>
@@ -118,7 +118,7 @@
                 <section id="colorlib-hero" class="js-fullheight" data-section="home">
                     <div class="flexslider js-fullheight">
                         <ul class="slides">
-                            <li style="background-image:url(images/img_bg_1.jpg)">
+                            <li style="background-image:url(images/3.jpg)">
                                 <div class="overlay"></div>
                                 <div class="container-fluid">
                                     <div class="row">
@@ -138,7 +138,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li style="background-image:url(images/ximg_bg_2.jpg.pagespeed.ic.0rX0GbDP6F.jpg)">
+                            <li style="background-image:url(images/4.jpg)">
                                 <div class="overlay"></div>
                                 <div class="container-fluid">
                                     <div class="row">
@@ -146,7 +146,7 @@
                                             class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
                                             <div class="slider-text-inner">
                                                 <div class="desc">
-                                                    <h2>I am <br>a Designer</h2>
+                                                    <h2>I am <br>a UI/UX Designer and Web Developer</h2>
                                                     {{-- <h2>100% html5 bootstrap templates Made by <a
                                                             href="https://colorlib.com/"
                                                             target="_blank">colorlib.com</a></h2> --}}
@@ -863,6 +863,7 @@
                                         <p><a href="tel://">+123 456 7890</a></p>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="col-md-7 col-md-push-1">
                                 <div class="row">

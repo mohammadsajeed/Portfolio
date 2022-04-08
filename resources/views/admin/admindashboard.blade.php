@@ -161,7 +161,7 @@
                                     class="hide-menu">Experience</span></a>
                         </li>   <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/skills"
-                                aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                aria-expanded="false"><i class="mdi mdi-view-student"></i><span
                                     class="hide-menu">Skills</span></a>
                         </li>
                         <li class="sidebar-item">
@@ -175,10 +175,15 @@
                                     class="hide-menu">Work Experience</span></a>
                         </li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/project"
+                                aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                    class="hide-menu">Projects</span></a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/logout"
                                 aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Logout</span></a>
-                        </li> work
+                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

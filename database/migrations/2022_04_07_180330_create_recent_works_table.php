@@ -15,7 +15,11 @@ class CreateRecentWorksTable extends Migration
     {
         Schema::create('recent_works', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('project_name');
+            $table->string('description');
+            $table->string('github_link');
+            $table->string('pic');
+
         });
     }
 
