@@ -27,4 +27,11 @@ class Experience_Controller extends Controller
          return redirect('experience');
 
     }
+    public function experience_delete($id)
+{
+     $delete = Experience::find($id);
+     $delete->delete();
+     session()->flash('delete','Record Deleted Successfully');
+     return redirect('experience');
+    }
 }

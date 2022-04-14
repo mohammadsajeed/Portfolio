@@ -9,7 +9,8 @@ use App\Models\About_us;
 class About_us_Controller extends Controller
 {
     public function index(){
-        return view('admin.about');
+        $read_about = About_us::OrderBy('id','desc')->get();
+        return view('admin.about',compact('read_about'));
     }
     public function add_about_us(Request $re){
 
@@ -22,6 +23,13 @@ class About_us_Controller extends Controller
      ]);
      session()->flash('msg','About Added Successfuly ');
      return  redirect('about_us');
+    }
+    public function about_delete($id)
+    {
+        $delete = About_us::find($id);
+        $delete->delete();
+        session()->flash('delete','Record Deleted Successfully');
+        return redirect('about_us');
     }
 
 }

@@ -13,7 +13,7 @@
                                     <div class="alert  alert-success">{{ session('msg') }}</div>
                                 @endif
                                 @if (session()->has('delete'))
-                                    <div class="alert  alert-success">{{ session('delete') }}</div>
+                                    <div class="alert  alert-danger">{{ session('delete') }}</div>
                                 @endif
 
                                 @error('photo')
@@ -65,35 +65,25 @@
                                 <table id="date_table" class="table table-striped  ">
                                     <thead>
                                         <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
-                                                colspan="1" aria-label="Name: activate to sort column ascending"
-                                                style="width: 173.575px;">Title</th>
+
                                             <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Position: activate to sort column ascending"
                                                 style="width: 278.038px;">Description </th>
-                                            <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
-                                                colspan="1" aria-label="Position: activate to sort column ascending"
-                                                style="width: 278.038px;">Picture </th>
-                                            <th class="sorting_desc" tabindex="0" aria-controls="zero_config" rowspan="1"
-                                                colspan="1" aria-label="Start date: activate to sort column ascending"
-                                                style="width: 110.85px;" aria-sort="descending">Edit</th>
                                             <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Salary: activate to sort column ascending"
                                                 style="width: 103.637px;">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($res_aabout as $about)
+                                        @foreach ($read_about as $about)
                              <tr role="row" class="odd">
-                                <td class="">{{$about->title}}</td>
-                                <td class="">{{$about->description}}</td>
-                                <td class=""><a href="pic/{{$about->pic}}" target="blank"><img src="pic/{{$about->pic}}" width="70px" height="70px" alt=""></a></td>
-                                <td class="sorting_1"><a href="" class="btn btn-primary">Edit</a></td>
-                                <td class="sorting_1"><button class="btn btn-danger "  wire:click.prevent="delete({{$about->id}})"> Delete</button></td>
+
+                                <td class="">{!! $about->Description !!}</td>
+                                <td class="sorting_1"><a href="/about_delete/{{$about->id}}" class="btn btn-danger" ><span style="color: white">Delete</span></a></td>
 
                             </tr>
 
-                             @endforeach --}}
+                             @endforeach
 
                                     </tbody>
 

@@ -27,4 +27,11 @@ class Education_controller extends Controller
         return redirect('education');
 
     }
+    public function edu_delete($id)
+    {
+         $delete = Education_info::find($id);
+         $delete->delete();
+         session()->flash('delete','Record Deleted Successfully');
+         return redirect('education');
+    }
 }

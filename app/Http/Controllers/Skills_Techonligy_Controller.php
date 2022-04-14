@@ -32,4 +32,11 @@ class Skills_Techonligy_Controller extends Controller
 
 
      }
+     public function skills_delete($id)
+     {
+         $delete = Skills_technology::find($id);
+         $delete->delete();
+         session()->flash('delete','Record Deleted Successfully ');
+         return redirect('skills');
+     }
 }

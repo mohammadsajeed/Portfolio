@@ -4,71 +4,85 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="/add_project">
+                    <form class="form-horizontal" method="POST" enctype="multipart/form-data"  action="/add_artical">
                         @csrf
                         <div class="card-body">
-                            <h4 class="card-title">Porjects Managment</h4><br>
+                            <h4 class="card-title">Articales Managment</h4><br>
                             <div class="form-group row">
                                 @if (session()->has('msg'))
                                     <div class="alert  alert-success">{{ session('msg') }}</div>
                                 @endif
                                 @if (session()->has('delete'))
-                                    <div class="alert  alert-success">{{ session('delete') }}</div>
+                                    <div class="alert  alert-danger">{{ session('delete') }}</div>
                                 @endif
-                                @error('project_name')
+
+                                @error('title')
                                     <div class="alert  alert-danger"> {{ $message }}</div>
                                 @enderror
-                                @error('github_link')
-                                    <div class="alert  alert-danger"> {{ $message }}</div>
-                                @enderror
-                                @error('pic')
+                                @error('date')
                                 <div class="alert  alert-danger"> {{ $message }}</div>
-                                @enderror
+                            @enderror
+                                @error('category')
+                                <div class="alert  alert-danger"> {{ $message }}</div>
+                            @enderror
+
                                 @error('description')
-                                <div class="alert  alert-danger"> {{ $message }}</div>
+                                    <div class="alert  alert-danger"> {{ $message }}</div>
                                 @enderror
                                 <div class="col-md-6 ">
-                                    <label for="fname">Project Name</label>
+                                    <label for="fname">Artical Title</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="title" name="project_name"
-                                            placeholder="Please Write Project Name ">
-                                        <br>
-
-                                    </div>
-                                    <label for="fname"> Link</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="title" name="github_link"
-                                            placeholder="Please Write Github Link ">
+                                        <input type="text" class="form-control" id="title" name="title"
+                                            placeholder=" ">
                                         <br>
 
                                     </div>
 
                                 </div>
                                 <div class="col-md-6 ">
-                                    <label for="fname">Description</label>
+                                    <label for="fname">Date</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="title" name="description"
-                                            placeholder="Please Write Project decription ">
+                                        <input type="text" class="form-control" id="title" name="date"
+                                            placeholder="DD-MM-YYYY ">
                                         <br>
 
                                     </div>
+
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label for="fname">Category </label>
+                                    <div class="col-sm-9">
+
+                                      <select name="category"  class="form-control">
+                                          <option value=""> Select Category </option>
+                                          <option value="1">Web Desgin </option>
+                                          <option value="2">Android Development </option>
+                                          <option value="3">Backend Development </option>
+
+                                      </select>
+                                        <br>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 ">
                                     <label for="fname">Picture</label>
                                     <div class="col-sm-9">
-                                        <input type="file" class="form-control" id="title" name="pic"
-                                            ">
+                                        <input type="file" class="form-control" id="title" name="file"
+                                         ">
                                         <br>
 
                                     </div>
 
                                 </div>
-                                {{-- <div>
+                                <div>
                                     <label for="fname">About Us </label>
                                     <div class="col-sm-9">
                                         <textarea name="description" id="editor1" class="form-control"  cols="30" rows="10"></textarea>
                                         <br>
 
                                     </div>
-                                </div> --}}
+                                </div>
 
 
                             </div>
@@ -76,7 +90,7 @@
                         </div>
                         <div class="border-top">
                             <div class="card-body">
-                                <button type="submit" class="btn btn-primary">Add Project</button>
+                                <button type="submit" class="btn btn-primary">Add Articales</button>
                             </div>
                         </div>
                     </form>
@@ -96,30 +110,42 @@
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Name: activate to sort column ascending"
-                                                style="width: 173.575px;">Project Name</th>
+                                                style="width: 173.575px;">Title</th>
                                             <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Position: activate to sort column ascending"
-                                                style="width: 278.038px;">Decription </th>
+                                                style="width: 278.038px;">Category </th>
+                                            <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
+                                                colspan="1" aria-label="Position: activate to sort column ascending"
+                                                style="width: 278.038px;">Date </th>
                                                 <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Position: activate to sort column ascending"
-                                                style="width: 278.038px;">Link  </th> <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
+                                                style="width: 278.038px;">Description </th>
+                                                <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Position: activate to sort column ascending"
                                                 style="width: 278.038px;">Picture </th>
-                                            <th class="sorting_desc" tabindex="0" aria-controls="zero_config" rowspan="1"
-                                                colspan="1" aria-label="Start date: activate to sort column ascending"
-                                                style="width: 110.85px;" aria-sort="descending">Delete</th>s
 
+                                            <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
+                                                colspan="1" aria-label="Salary: activate to sort column ascending"
+                                                style="width: 103.637px;">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($read_project as $project)
+                                        @foreach ($read_aritcals as $artical)
                              <tr role="row" class="odd">
-                                <td class="">{{$project->project_name}}</td>
-                                <td class="">{{$project->description}}</td>
-                                <td class="">{{$project->github_link}}</td>
-                                <td class=""> <a href="images/{{$project->pic}}" target="blank"><img src="images/{{$project->pic}}" width="80px" height="80px" alt=""></a></td>
+                                <td class="">{{$artical->title}}</td>
+                                <td class="">@if($artical->category ==1)
+                                        {{'Web Desgin '}}
+                                @elseif ($artical->category ==2)
+                                         {{'Android Development'}}
+                                @elseif ($artical->category ==3)
+                                         {{'Backend Development '}}
+                                @endif</td>
+                                <td class="">{{$artical->date}}</td>
+                                <td class="">{!! $artical->description !!}</td>
+                                <td class=""><a href=""></a><img src="/images/{{$artical->pic}}" alt="" width="60px" height="60px"></td>
 
-                                <td class="sorting_1"><a href="/project_delete/{{$project->id}}" class="btn btn-danger"><span style="color: white ">Delete</span></a></td>
+
+                                <td class="sorting_1"><a href="/artical_delete/{{$artical->id}}" class="btn btn-danger"><span style="color: white ">Delete</span></a></td>
 
                             </tr>
 

@@ -30,4 +30,12 @@ class Work_experience_controller extends Controller
         return redirect('work');
 
     }
+
+    public function work_delete($id)
+    {
+        $delete = Work_experience::find($id);
+        $delete->delete();
+        session()->flash('delete','Record Deleted Successfully ');
+        return redirect('work');
+    }
 }

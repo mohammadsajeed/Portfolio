@@ -13,7 +13,7 @@
                                     <div class="alert  alert-success">{{ session('msg') }}</div>
                                 @endif
                                 @if (session()->has('delete'))
-                                    <div class="alert  alert-success">{{ session('delete') }}</div>
+                                    <div class="alert  alert-sanger">{{ session('delete') }}</div>
                                 @endif
 
                                 @error('degree_title')
@@ -84,9 +84,7 @@
                                                 <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Position: activate to sort column ascending"
                                                 style="width: 278.038px;">Date </th>
-                                            <th class="sorting_desc" tabindex="0" aria-controls="zero_config" rowspan="1"
-                                                colspan="1" aria-label="Start date: activate to sort column ascending"
-                                                style="width: 110.85px;" aria-sort="descending">Edit</th>
+
                                             <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1"
                                                 colspan="1" aria-label="Salary: activate to sort column ascending"
                                                 style="width: 103.637px;">Delete</th>
@@ -98,8 +96,8 @@
                                 <td class="">{{$work->Job_title}}</td>
                                 <td class="">{!! $work->description !!}</td>
                                 <td class="">{{ $work->date_details }}</td>
-                                <td class="sorting_1"><a href="" class="btn btn-primary">Edit</a></td>
-                                <td class="sorting_1"><button class="btn btn-danger " style=" color:white"> Delete</button></td>
+                                <td class="sorting_1"><a href="/work_delete/{{$work->id}}" class="btn btn-danger"><span style="color : white">Delete<s/span?</a></td>
+
 
                             </tr>
 
