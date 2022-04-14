@@ -25,7 +25,7 @@ class Artical_Controller extends Controller
         $img = $req->file;
           $filename = $img->getClientOriginalName();
           $imageresize = image::make($img->getRealPath());
-          $imageresize->resize(800,862);
+          $imageresize->resize(800,555);
           $imageresize->save(public_path('images/'.$filename));
 
         Artical::create([
