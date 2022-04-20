@@ -498,7 +498,7 @@
                                         <i class="icon-phone"></i>
                                     </div>
                                     <div class="colorlib-text">
-                                        <p><a href="tel://">1234567890-</a></p>
+                                        <p><a href="tel://">+93749689043</a></p>
                                     </div>
                                 </div>
 
